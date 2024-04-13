@@ -17,16 +17,18 @@ wstool update -j8
 cd pedsim_ros
 git submodule update --init --recursive
 cd ../..
+catkin build -c
 ```
 
 ## Chạy
 
 ### Terminal 1:
 ```
-cd ws_pedsim	#thay đổi nếu tên workspace khác
+cd ~/ws_pedsim	#thay đổi nếu tên workspace khác
 source devel/setup.bash
 roslaunch steer2nextpose move2nextpose.launch
 ```
+Khi chạy có báo lỗi ""odom" passed to lookupTransform argument target_frame does not exist." là bình thường.
 
 ### Terminal 2:
 Giả sử điều khiển robot chạy tới pose(10.1, 11.0, 0.0)
@@ -34,3 +36,5 @@ Giả sử điều khiển robot chạy tới pose(10.1, 11.0, 0.0)
 rostopic pub -r 10 /nextpose geometry_msgs/Pose2D  '{x: 10.1, y: 11.0, theta: 0.0}'
 ```
 Thay đổi giá trị pose(x,y,theta) tới vị trí khác theo nhu cầu.
+
+Khi tới đích trên Terminal1 báo "Goal has been reached!"
