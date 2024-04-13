@@ -1,0 +1,4 @@
+- git:
+    local-name: pedsim_ros
+    uri: https://github.com/srl-freiburg/pedsim_ros.git
+    version: de3772630ae174b278da00bcf26e5cf6c2db5ab2
