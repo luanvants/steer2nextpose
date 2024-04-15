@@ -40,4 +40,4 @@ Thay đổi giá trị pose(x,y,theta) tới vị trí khác theo nhu cầu.
 Khi tới đích trên Terminal1 báo "Goal has been reached!"
 
 ## Phối hợp
-Viết ROS node để Publish Path rời rạc: P1(x1, y1, theta1), P_end(x2, y2, theta2),..., P1(x_end, y_end, theta_end) tới /nextpose topic
+Viết ROS node để Publish Path rời rạc: P1(x1, y1, theta1), P2(x2, y2, theta2),..., P_end(x_end, y_end, theta_end) tới /nextpose topic
