@@ -33,11 +33,11 @@ Khi chạy có báo lỗi ""odom" passed to lookupTransform argument target_fram
 ### Terminal 2:
 Giả sử điều khiển robot chạy tới pose(10.1, 11.0, 0.0)
 ```
-rostopic pub -r 10 /nextpose geometry_msgs/Pose2D  '{x: 10.1, y: 11.0, theta: 0.0}'
+rostopic pub -1 /nextpose geometry_msgs/Pose2D  '{x: 10.1, y: 11.0, theta: 0.0}'
 ```
 Thay đổi giá trị pose(x,y,theta) tới vị trí khác theo nhu cầu.
 
 Khi tới đích trên Terminal1 báo "Goal has been reached!"
 
 ## Phối hợp
-Viết ROS node để Publish Path rời rạc: P1(x1, y1, theta1), P1(x2, y2, theta2),..., P1(x_end, y_end, theta_end) tới /nextpose topic
+Viết ROS node để Publish Path rời rạc: P1(x1, y1, theta1), P_end(x2, y2, theta2),..., P1(x_end, y_end, theta_end) tới /nextpose topic
